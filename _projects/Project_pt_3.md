@@ -1,8 +1,8 @@
 ---
-name: Project part 3
-tools: [Python, HTML, vega-lite]
-image: assets/pngs/cars.png
-description: This is a "showcase" project that uses vega-lite for interactive viz!
+name: Project Part 3
+tools: [Python, vega-lite, Altair]
+image: assets/pngs/visualization.png
+description: This project showcases registered electric vehicles in the state of Washington
 custom_js:
   - vega.min
   - vega-lite.min
@@ -11,42 +11,38 @@ custom_js:
 ---
 
 
-# Example including vega-lite
+# Electric Vehicles are on the Rise but how Fast are they Growing and when did this Trend Start?
 
-Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) that was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
+Electric Vehicles are on the rise everyday in order to reduce emissions and make the air we breathe cleaner everyday. 
 
-We can use a vegachart HTML tag like so:
+## Graph 1: Interactive Plot using Altair
 
-```
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
-```
+This graph shows the counties in the U.S and each type of licenses that are present based on a selected county. 
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/cars.json" style="width: 100%"></vegachart>
+I created this graph by using the [raw data](https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv) and loaded the data through pandas. For the graph to left, I encoded my x-axis (License Type) and my y-axis (County) to be Nominal since the values do not have a particular order. The same goes for the y axis for the graph on the right. I decided to use the scheme of blues for my graph since it is simple to read and understand. The darker the color, the more counts there are. For data transformations, I am using the count() function directly into the encoding so that I did not have to manually group the licenses. This is what I did for the x-axis for the graph to the right.
 
-In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
+This graph was made using an altair chart and I used the brush interactivity which allows the user to select certain counties and see the license type. Users also have the freedom to choose the size of their selection of counties and the results of the status of the selected counties will be shown on the right graph.
 
 
-## Search The Data & Methods
+<vegachart schema-url="{{ site.baseurl }}/assets/json/altair_license.json" style="width: 100%"></vegachart>
 
-Below is where we can put some links to both the data and the analysis code as buttons:
 
-```
-<div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
-</div>
+## Graph 2: Simple plot using Altair
 
-<div class="right">
-{% include elements/button.html link="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html" text="The Analysis" %}
-</div>
-```
+This graph shows the top ten most common license types and shows how many of each license there are. I created this graph using the same [data](https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv) from above and this one is simple with no interactivity. 
+
+Similarly to the graph 1, the data transformation I did the count() function into the encoding so that I did not have to group the licenses. For color scheme, I decided to do green so that it could be different than the colors of graph 1. 
+
+<vegachart schema-url="{{ site.baseurl }}/assets/json/top_ten(1).json" style="width: 100%"></vegachart>
+
+
 
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
+{% include elements/button.html link="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/Jigs1121/Jigs1121.github.io/blob/main/python_notebooks/HW-5.ipynb" text="The Analysis" %}
 </div>
-
