@@ -24,7 +24,7 @@ I created this graph by using the [raw data](https://raw.githubusercontent.com/U
 This graph was made using an altair chart and I used the brush interactivity which allows the user to select certain counties and see the license type. Users also have the freedom to choose the size of their selection of counties and the results of the status of the selected counties will be shown on the right graph.
 
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/altair_license.json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/electric.json" style="width: 100%"></vegachart>
 
 
 ## Graph 2: Simple plot using Altair
