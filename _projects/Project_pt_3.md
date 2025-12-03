@@ -40,7 +40,7 @@ Similarly to the graph 1, the data transformation I did the count() function int
 <!-- these are written in a combo of html and liquid --> 
 
 <div class="left">
-{% include elements/button.html link="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_data/main/licenses_fall2022.csv" text="The Data" %}
+{% include elements/button.html link="https://raw.githubusercontent.com/Jigs1121/Jigs1121.github.io/refs/heads/main/electric_filtered.csv" text="The Data" %}
 </div>
 
 <div class="right">
