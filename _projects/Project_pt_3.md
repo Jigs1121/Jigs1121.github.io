@@ -33,7 +33,7 @@ This graph shows the top ten most common license types and shows how many of eac
 
 Similarly to the graph 1, the data transformation I did the count() function into the encoding so that I did not have to group the licenses. For color scheme, I decided to do green so that it could be different than the colors of graph 1. 
 
-<vegachart schema-url="{{ site.baseurl }}/assets/json/top_ten(1).json" style="width: 100%"></vegachart>
+<vegachart schema-url="{{ site.baseurl }}/assets/json/county.json" style="width: 100%"></vegachart>
 
 
 
