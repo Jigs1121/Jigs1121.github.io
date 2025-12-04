@@ -24,8 +24,9 @@ Electric Vehicles are on the rise everyday in order to reduce emissions and make
 
 
 
-## Graph 2: Simple Plot Showing Something
+## Graph 2: Simple Plot Showing Top 10 EV Car Brands
 
+<vegachart schema-url="{{ site.baseurl }}/assets/json/top_makes.json" style="width: 100%"></vegachart>
 
 
 ## Graph 3: Interactive Plot
